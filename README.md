@@ -11,7 +11,7 @@ This public repository stores the Python code used to compute the aggregate stat
 
 The three data sources used to generate the Suicide Trends and Archival Comparative Knowledgebase (STACK) used in the paper are:
 
-(1) Summary vital statistics data from annual reports (1900-1968) available on the National Center Health Statistics (NCHS) website. See https://www.cdc.gov/nchs/products/vsus.htm. 
+(1) Summary vital statistics data from annual reports (1900-1968), available on the National Center Health Statistics (NCHS) website. See https://www.cdc.gov/nchs/products/vsus.htm. 
 
 (2) Approved, restricted, de-identified, and individual-level death certificate data obtained from Detailed Multiple Cause of Death (MCOD) files provided by NCHS for deaths from 1968 to 2021. See https://www.cdc.gov/nchs/data/nvss/detailed-mortality-file-description.pdf.
 
