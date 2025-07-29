@@ -1,5 +1,5 @@
 <div align="right">
-  Last update: 2025 July 29, 08:54 (by Wayne Lam)
+  Last update: 2025 July 29, 09:35 (by Wayne Lam)
 </div>
 <hr>
 
@@ -18,6 +18,8 @@ The three data sources used to generate the Suicide Trends and Archival Comparat
 (3) Population denominator counts for calendar year-sex-race-county-specific single-year age groups obtained from the Surveillance, Epidemiology, and End Results (SEER) Program that curates and distributes these US Census data. See https://seer.cancer.gov/popdata.
 
 # Code
+
+Code used to compute summary statistics is written in Python. Scripts include data quality check, filtering patients with specific demographic characteristics and/or ICD codes, and computation of age-standardized and indexed death rates.
 
 [To be updated]
 
