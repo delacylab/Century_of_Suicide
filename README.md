@@ -5,7 +5,7 @@
 
 # Code for "A century of suicide: New insights from long term data in the United States" by de Lacy et al.
 
-This public repository stores the Python code used to compute the aggregate statistics reported in the paper. 
+This public repository stores the Python code used to compute the summary statistics reported in the paper. 
 
 # Data Sources
 
