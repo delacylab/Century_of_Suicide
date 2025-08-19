@@ -17,7 +17,7 @@
 ########################################################################################################################
 
 ########################################################################################################################
-# Overview: This script provides the function needed to compute age-standardized rates from raw rates.
+# Overview: This script provides the functions needed to compute age-standardized rates.
 ########################################################################################################################
 
 ########################################################################################################################
@@ -128,18 +128,18 @@ def compute_age_standardized_rates(df: pd.DataFrame,
     assert pop_col in df_pop.columns, 'pop_col must be a column in df_pop.'
 
     # Compute the count per age group from each individual's age
-    df[age_group_col]: pd.Series = df[age_col].map(create_age_group_dict())
+    df[age_group_col] = df[age_col].map(create_age_group_dict())
     df_age_group: pd.DataFrame = df.groupby(by=age_group_col).agg(count=(age_group_col, 'count')).reset_index()
 
     # Merge with df_pop on the age_group_col columns
     df_age_group = pd.merge(left=df_age_group, right=df_pop[[age_group_col, pop_col]], on=age_group_col, how='left')
 
     # Compute the raw rate (per 100,000 persons) for each age group
-    df_age_group['Raw_Rate_Per_100k']: pd.Series = df_age_group['count'] / (df_age_group['Population'] / 100000)
+    df_age_group['Raw_Rate_Per_100k'] = df_age_group['count'] / (df_age_group['Population'] / 100000)
 
     # Compute the proportional rate (per 100,000 persons) for each age group
-    df_age_group['Weight']: pd.Series = df_age_group['Age_Group'].map(create_age_group_weight_dict())
-    df_age_group['Standardized_Rate_Per_100k']: pd.Series = df_age_group['Raw_Rate_Per_100k'] * df_age_group['Weight']
+    df_age_group['Weight'] = df_age_group['Age_Group'].map(create_age_group_weight_dict())
+    df_age_group['Standardized_Rate_Per_100k'] = df_age_group['Raw_Rate_Per_100k'] * df_age_group['Weight']
 
     # Compute and return the raw rate and age-standardized rates (per 100,000 persons)
     raw_rate: float = df_age_group['Raw_Rate_Per_100k'].sum()
