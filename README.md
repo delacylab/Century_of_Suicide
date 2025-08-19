@@ -19,7 +19,7 @@ The three data sources used to generate the Suicide Trends and Archival Comparat
 
 # Code
 
-Code used to compute summary statistics is written in Python. Scripts include data quality check, filtering patients with specific demographic characteristics and/or ICD codes, and computation of age-standardized and indexed death rates.
+Code used to compute summary statistics is written in Python. Scripts include filtering patients with specific demographic characteristics and/or ICD codes, and computation of age-standardized and indexed death rates.
 
 [To be updated]
 
