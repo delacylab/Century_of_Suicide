@@ -163,8 +163,8 @@ def extract_suicide_specific(df: pd.DataFrame,
 
 
 ########################################################################################################################
-# Define a function to extract the records with only the individuals who died by heart attack, homicide, or motor
-# vehicle accident.
+# Define a function to extract the records with only the individuals who died by heart attack, homicide, motor
+# vehicle accident, or overdose.
 # Reference: https://www.mdch.state.mi.us/osr/fatal/icd10.asp
 ########################################################################################################################
 
