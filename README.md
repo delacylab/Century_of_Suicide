@@ -1,5 +1,5 @@
 <div align="right">
-  Last update: 2025 August 19, 12:01 (by Wayne Lam)
+  Last update: 2025 August 19, 16:46 (by Wayne Lam)
 </div>
 <hr>
 
@@ -19,11 +19,13 @@ The three data sources used to generate the Suicide Trends and Archival Comparat
 
 # Code
 
-Code used to compute summary statistics is written in Python. The scripts include functions that 
-(a) Sample individuals with a specific demographic characteristic (e.g., gender, race, and degree of rurality);
-(b) Sample individuals who completed suicide, with or without further specifying the method of death;
-(c) Sample individuals who died from heart attack, homicide, motor vehicle accident, or overdose;
-(d) Compute age-standardized death rates from the MCOD data with the population denominator counts from the SEER data; 
-(e) Compute indexed death rates from pre-computed crude or age-standardized death rates.
+Code used to compute summary statistics is written in Python. The scripts, located in the directory `Python_Scripts`, include the following functions:
 
-
+|Script name|Function name|Description|
+|---|---|---|
+|`Age_Standardization.py`|`compute_age_standardized_rates`|Compute age-standardized death rates from the MCOD data with the population denominator counts from the SEER data.|
+|`Data_Indexing.py`|`indexing_data`|Compute indexed death rates from pre-computed crude or age-standardized death rates.|
+|`Demographic_Sampling.py`|`extract_gender`|Sample individuals from the MCOD data with a specific gender.|
+|`Demographic_Sampling.py`|`extract_3_race`|Sample individuals from the MCOD data with a specific race in the range of 'White', 'Black', and 'Others'.|
+|`Demographic_Sampling.py`|`extract_4_race`|Sample individuals from the MCOD data with a specific race in the range of 'White', 'Black', and 'American Indian', and 'Asian or Pacific Islander'.|
+|`Demographic_Sampling.py`|`extract_generation`|Sample individuals from the MCOD data with a specific generation in the range of 'Silent Generation', 'Baby Boomers', 'Generation X', 'Millennials', and 'Generation Z'.|
