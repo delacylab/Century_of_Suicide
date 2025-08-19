@@ -59,7 +59,7 @@ def extract_suicide(df: pd.DataFrame,
            The year of the MCOD data.
     :return:
     df_sub: A pandas.DataFrame.
-    df with ony individuals who completed suicide according to their death records.
+    df with only individuals who completed suicide according to their death records.
     """
 
     # Type and value check

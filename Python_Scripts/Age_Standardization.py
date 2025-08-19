@@ -91,6 +91,9 @@ def create_age_group_weight_dict():
 
 ########################################################################################################################
 # Define a function to compute age-standardized rates from a raw dataset with rows storing the individuals' age
+# Remark: In some uncommon occasions, MCOD data uses two columns, 'Age_Number' and 'Age_Type' to encode age. For
+# example, 'Age_Type' as 1 means the individual has an age above 100 such that his actual age should be defined by
+# 'Age_Type' + 'Age_Number'. Users should clean the MCOD data accordingly before using this function.
 ########################################################################################################################
 
 
