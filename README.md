@@ -7,7 +7,7 @@
 
 This public repository stores the Python code used to compute the summary statistics reported in the paper. 
 
-# Data Sources
+# :bar_chart: Data Sources #
 
 The three data sources used to generate the Suicide Trends and Archival Comparative Knowledgebase (STACK) used in the paper are:
 
@@ -17,7 +17,7 @@ The three data sources used to generate the Suicide Trends and Archival Comparat
 
 (3) Public-use population denominator counts for calendar year-sex-race-county-specific single-year age groups obtained from the Surveillance, Epidemiology, and End Results (SEER) Program that curates and distributes these US Census data. See https://seer.cancer.gov/popdata.
 
-# Code
+# :page_with_curl: Code #
 
 The code used to compute summary statistics reported in the paper is written in Python (version 3.11 or later), requiring only the common `Numpy` (version 1.26.4 or later) and `Pandas` (version 2.2.3 or later) dependencies. The table below lists the functions defined in the scripts stored in the `Code` directory.
 
