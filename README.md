@@ -1,17 +1,17 @@
 <div align="right">
-  Last update: 2025 August 20, 09:39 MT (by Wayne Lam)
+  Last update: 2025 August 20, 10:03 MT (by Wayne Lam)
 </div>
 <hr>
 
 # Code for "A century of suicide: New insights from long term data in the United States" by de Lacy et al.
 
-This public repository stores the Python code used to compute the summary statistics reported in the paper. 
+This repository contains the code and methodology for reproducing the summary statistics (e.g., suicide rates) reported in the paper.
 
 # :bar_chart: Data Sources #
 
 The three data sources used to generate the Suicide Trends and Archival Comparative Knowledgebase (STACK) used in the paper are:
 
-(1) U.S. cause-specific mortality rates from 1900 to 1968 were reported in the National Center for Health Statistics (NCHS) annual reports. See https://www.cdc.gov/nchs/products/vsus.htm. 
+(1) U.S. cause-specific mortality rates from 1900 to 1968 were reported in the National Center for Health Statistics (NCHS) annual reports. Population denominator counts and suicide counts/rates were extracted manually from the reports. See https://www.cdc.gov/nchs/products/vsus.htm. 
 
 (2) U.S. data for county-level cause-specific mortality rates, also known as the Multiple Cause of Death (MCOD) data, were obtained from NCHS for 1968-2021. These restricted data, stratified by age, sex, race, and year, were obtained by securing approval through a Data Use Agreement with NCHS. Investigators can apply for these data directly with NCHS (https://www.cdc.gov/nchs/nvss/nvss-restricted-data.htm). The CDC Public Use Data File Documentation (https://www.cdc.gov/nchs/nvss/mortality_public_use_data.htm) provides instructions for parsing the raw MCOD data files.
 
@@ -34,3 +34,7 @@ The code used to compute summary statistics reported in the paper is written in 
 |`ICD_Classification.py`|`extract_suicide`|Sample individuals from the MCOD data with a suicide death.|
 |`ICD_Classification.py`|`extract_suicide_specific`|Sample individuals from the MCOD data with a specific method of suicide death.|
 |`ICD_Classification.py`|`extract_others`|Sample individuals from the MCOD data with a specific method of death (i.e., 'heart attack', 'homicide', 'motor vehicle accident', and 'overdose').|
+
+# :chart_with_upwards_trend: Joinpoint Regression
+
+
