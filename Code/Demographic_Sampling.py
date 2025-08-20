@@ -18,7 +18,7 @@
 
 ########################################################################################################################
 # Overview: This script provides the functions needed to sample the individuals of a certain demographic group (by
-# gender, race, and generation) from the Multiple Cause of Death (MCOD) data.
+# gender, age group, race, and generation) from the Multiple Cause of Death (MCOD) data.
 ########################################################################################################################
 
 ########################################################################################################################
@@ -27,6 +27,7 @@
 import numpy as np
 import pandas as pd
 from typing import Literal
+from Age_Standardization import create_age_group_dict
 
 ########################################################################################################################
 # Define a function to extract the records with only the individuals with a specific gender.
@@ -153,6 +154,52 @@ def extract_5_race(df: pd.DataFrame,
 
     # Subset the records by the specific race
     df_sub: pd.DataFrame = df[df['Race_Recode_5'] == race_int].reset_index(drop=True)
+    return df_sub
+
+########################################################################################################################
+# Define a function to extract the records with only the individuals belong to a specific age group.
+# Remark: Assume that 'Age_Number' exists in the MCOD data as a column to encode individuals' age in years. In some
+# uncommon occasions, the 'Age_Type' column is used to encode a certain unit used in encoding age. For example,
+# 'Age_Type' as 1 means the individual has an age above 100 such that his actual age should be defined by 'Age_Type' +
+# 'Age_Number'. Users should clean the MCOD data accordingly before using this function.
+########################################################################################################################
+
+
+def extract_age_group(df: pd.DataFrame,
+                      age_group_int: Literal[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]):
+    """
+    :param df: A pandas.DataFrame.
+           A dataset with each row representing an individual.
+    :param age_group_int: An integer in range(11).
+           The age group to be specified:
+           0: Age 0
+           1: Age 1-4
+           2: Age 5-14
+           3: Age 15-24
+           4: Age 25-34
+           5: Age 35-44
+           6: Age 45-54
+           7: Age 55-64
+           8: Age 65-74
+           9: Age 75-84
+           10: Age >=85
+    :return:
+    df_sub: A pandas.DataFrame.
+    df with only individuals with the specified age group.
+    """
+
+    # Type and value check
+    assert isinstance(df, pd.DataFrame), 'df must be a pandas.DataFrame.'
+    assert isinstance(age_group_int, int) and age_group_int in range(11), \
+        'age_group_int must be an integer in range(11).'
+    assert 'Age_Number' in df.columns, 'Age_Number must be a column in df.'
+
+    # Create the age group mapping dictionary and apply it to df
+    age_group_dict: dict[int, int] = create_age_group_dict()
+    df['Age_Group'] = df['Age_Number'].map(age_group_dict)
+
+    # Subset the records by the specific age group
+    df_sub: pd.DataFrame = df[df['Age_Group'] == age_group_int].reset_index(drop=True)
     return df_sub
 
 ########################################################################################################################
