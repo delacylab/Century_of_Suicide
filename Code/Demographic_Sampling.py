@@ -157,7 +157,7 @@ def extract_5_race(df: pd.DataFrame,
 
 ########################################################################################################################
 # Define a function to extract records with only the individuals with a specific generation: 'Silent Generation' (0),
-# 'Baby Boomers' (1), 'Generation X' (2), 'Millennials' (3), and Generation Z (4).
+# 'Baby Boomers' (1), 'Generation X' (2), 'Millennials' (3), and 'Generation Z' (4).
 # Remark: Assume that 'Age_Number' exists in the MCOD data as a column to encode individuals' age in years. In some
 # uncommon occasions, the 'Age_Type' column is used to encode a certain unit used in encoding age. For example,
 # 'Age_Type' as 1 means the individual has an age above 100 such that his actual age should be defined by 'Age_Type' +
