@@ -1,5 +1,5 @@
 <div align="right">
-  Last update: 2025 August 20, 10:03 MT (by Wayne Lam)
+  Last update: 2025 August 20, 10:43 MT (by Wayne Lam)
 </div>
 <hr>
 
@@ -37,4 +37,6 @@ The code used to compute summary statistics reported in the paper is written in 
 
 # :chart_with_upwards_trend: Joinpoint Regression
 
+Joinpoint regression was employed in the paper to detect significant shifts in temporal trends by estimating a sequence of linear segments connected by knots (i.e., _joinpoints_). For this purpose, we used the publicly available software `Joinpoint` (https://surveillance.cancer.gov/joinpoint/). 
 
+The modeling pipeline is straightforward. First, the software imports a dataset with two columns — calendar years and annual (suicide) rates. A maximum number of joinpoints is specified as a runtime parameter, after which the program evaluates candidate models through permutation testing. Based on a chosen model selection criterion, the software returns the best-fitting model and identifies the line segments separated by the estimated joinpoints. In our analysis (Figure 1 in the paper), the full timeseries from 1900 to 2021 was divided into two intervals (1900-1960 and 1960-2021) to avoid exceeding the computational limits of the software. A maximum of 5 joinpoints was allowed in each interval, and model selection was based on the Weighted Bayesian Information Criterion (WBIC).
