@@ -19,7 +19,7 @@ The three data sources used to generate the Suicide Trends and Archival Comparat
 
 # Code
 
-The code used to compute summary statistics is written in Python (version 3.11 or later), requiring only the common `Numpy` (version 1.26.4 or later) and `Pandas` (version 2.2.3 or later) dependencies. The table below lists the functions defined in the scripts stored in the `Code` directory, which were used to extract the summary statistics reported in the paper.
+The code used to compute summary statistics reported in the paper is written in Python (version 3.11 or later), requiring only the common `Numpy` (version 1.26.4 or later) and `Pandas` (version 2.2.3 or later) dependencies. The table below lists the functions defined in the scripts stored in the `Code` directory.
 
 |Script name|Function name|Description|
 |---|---|---|
