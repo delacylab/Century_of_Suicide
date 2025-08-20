@@ -28,7 +28,7 @@ Code used to compute summary statistics is written in Python. See the following 
 |`Demographic_Sampling.py`|`extract_gender`|Sample individuals from the MCOD data with a specific gender in the list of 'female' and 'male'.|
 |`Demographic_Sampling.py`|`extract_3_race`|Sample individuals from the MCOD data with a specific race in the list of 'White', 'Black', and 'others'.|
 |`Demographic_Sampling.py`|`extract_5_race`|Sample individuals from the MCOD data with a specific race in the list of 'White', 'Black', 'American Indian', and 'Asian or Pacific Islander'.|
-|`Demographic_Sampling.py`|`extract_generation`|Sample individuals from the MCOD data with a specific generation in the list of race in the list of 'Silent Generation', 'Baby boomers', 'Generation X', 'Millennials', and 'Generation Z'.|
+|`Demographic_Sampling.py`|`extract_generation`|Sample individuals from the MCOD data with a specific generation in the list of race in the list of 'Silent Generation', 'Baby Boomers', 'Generation X', 'Millennials', and 'Generation Z'.|
 |`Urbanicity_Sampling.py`|`extract_urbanicity`|Sample individuals from the MCOD data with a specific category in the list of 'urban counties', 'metro counties', and 'rural counties', defined by Rural-Urban Continuum Codes (RUCC).|
 |`ICD_Classification.py`|`extract_suicide`|Sample individuals from the MCOD data recorded as death by suicide.|
 |`ICD_Classification.py`|`extract_suicide_specific`|Sample individuals from the MCOD data recorded as death by suicide with a specific method of death in the list of 'firearms and explosives', 'poisoning', 'hanging, strangulation, and suffocation', and 'others'.|
