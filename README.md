@@ -1,5 +1,5 @@
 <div align="right">
-  Last update: 2025 August 19, 19:51 MT (by Wayne Lam)
+  Last update: 2025 August 20, 09:39 MT (by Wayne Lam)
 </div>
 <hr>
 
@@ -11,7 +11,7 @@ This public repository stores the Python code used to compute the summary statis
 
 The three data sources used to generate the Suicide Trends and Archival Comparative Knowledgebase (STACK) used in the paper are:
 
-(1) U.S. cause-specific mortality rates from 1900-1968 were reported in the National Center for Health Statistics (NCHS) annual reports. See https://www.cdc.gov/nchs/products/vsus.htm. 
+(1) U.S. cause-specific mortality rates from 1900 to 1968 were reported in the National Center for Health Statistics (NCHS) annual reports. See https://www.cdc.gov/nchs/products/vsus.htm. 
 
 (2) U.S. data for county-level cause-specific mortality rates, also known as the Multiple Cause of Death (MCOD) data, were obtained from NCHS for 1968-2021. These restricted data, stratified by age, sex, race, and year, were obtained by securing approval through a Data Use Agreement with NCHS. Investigators can apply for these data directly with NCHS (https://www.cdc.gov/nchs/nvss/nvss-restricted-data.htm). The CDC Public Use Data File Documentation (https://www.cdc.gov/nchs/nvss/mortality_public_use_data.htm) provides instructions for parsing the raw MCOD data files.
 
@@ -19,7 +19,7 @@ The three data sources used to generate the Suicide Trends and Archival Comparat
 
 # Code
 
-The code used to compute summary statistics is written in Python (≥3.11), requiring only the common `Numpy` (≥1.26.4) and `Pandas` (≥2.2.3) dependencies. The table below lists the functions defined in the scripts stored in the `Code` directory, which were used to extract the summary statistics reported in the paper.
+The code used to compute summary statistics is written in Python (version 3.11 or later), requiring only the common `Numpy` (version 1.26.4 or later) and `Pandas` (version 2.2.3 or later) dependencies. The table below lists the functions defined in the scripts stored in the `Code` directory, which were used to extract the summary statistics reported in the paper.
 
 |Script name|Function name|Description|
 |---|---|---|
