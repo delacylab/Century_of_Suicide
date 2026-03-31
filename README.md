@@ -19,7 +19,11 @@ The three data sources used to generate the Suicide Trends and Archival Comparat
 
 # :page_with_curl: Code #
 
-The code used to compute summary statistics reported in the paper is written in Python (version 3.11 or later), requiring only the common `Numpy` (version 1.26.4 or later) and `Pandas` (version 2.2.3 or later) dependencies. The table below lists the functions defined in the scripts stored in the `Code` directory.
+The code used to compute summary statistics reported in the paper is written in Python (version 3.11 or later), requiring only the common `Numpy` (version 1.26.4 or later) and `Pandas` (version 2.2.3 or later) dependencies. 
+
+For data extract-transfer-load (ETL) process from the raw MCOD tape-format data, the Python scripts in the subdirectory `Code/Parsing_Scripts/` transform each yearly MCOD data into a comma-separated-values (CSV) format file. Since tape locations (i.e., position of a data point within a tape-format data) of the raw data have been modified multiple times since 1968, different scripts were used to parse the associated data files.
+
+On the other hand, the table below lists the functions defined in the scripts stored in the `Code/` directory for data subsampling.
 
 |Script name|Function name|Description|
 |---|---|---|
